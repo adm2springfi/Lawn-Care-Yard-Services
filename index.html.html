@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawn Care & Yard Gardening Services | East London</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-emerald-600/30">
+                        <i class="fa-solid fa-leaf text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold text-slate-900 tracking-tight block leading-none">Lawn Care & Yard</span>
+                        <span class="text-xs font-semibold uppercase text-emerald-600 tracking-widest block mt-1">Gardening Services</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Desktop -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#services" class="hover:text-emerald-600 transition">Services</a>
+                    <a href="#calculator" class="hover:text-emerald-600 transition">Estimate Pricing</a>
+                    <a href="#about" class="hover:text-emerald-600 transition">Why Us</a>
+                    <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
+                </nav>
+
+                <!-- Call Button & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <a href="tel:0625767344" class="hidden sm:inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 font-semibold px-4 py-2.5 rounded-xl border border-emerald-200 transition">
+                        <i class="fa-solid fa-phone text-emerald-600"></i>
+                        <span>062 576 7344</span>
+                    </a>
+                    <a href="#booking" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-600/25 transition">
+                        Book Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-emerald-900 via-emerald-800 to-slate-900 text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-400/20 px-3 py-1.5 rounded-full text-emerald-300 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Serving East London & Surrounds</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Pristine Lawns. <br>
+                        <span class="text-emerald-400">Expert Yard Care.</span>
+                    </h1>
+                    <p class="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 font-normal">
+                        From precision lawn cutting and edge trimming to total weed control, tree pruning, and garden refuse removal. Reliable, fast, and local.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#calculator" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-xl shadow-emerald-500/20 text-center transition">
+                            Instant Quote Calculator
+                        </a>
+                        <a href="#booking" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 text-center backdrop-blur transition">
+                            Schedule a Cleanup
+                        </a>
+                    </div>
+
+                    <!-- Key Badges -->
+                    <div class="pt-8 border-t border-emerald-800/60 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl font-bold text-emerald-400">100%</p>
+                            <p class="text-xs text-slate-400">Satisfaction Guarantee</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-emerald-400">Same Day</p>
+                            <p class="text-xs text-slate-400">Quote Responses</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-emerald-400">Full Refuse</p>
+                            <p class="text-xs text-slate-400">Garden Waste Removal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Booking Card -->
+                <div class="lg:col-span-5">
+                    <div id="booking" class="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl text-slate-800 border border-slate-100">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Book a Service Visit</h3>
+                        <p class="text-xs text-slate-500 mb-6">Fill in your details for a quick callback or scheduled booking.</p>
+                        
+                        <!-- Booking Form -->
+                        <form name="gardening-booking" method="POST" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Full Name</label>
+                                <input type="text" name="name" required placeholder="e.g. John Doe" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition text-sm">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Phone Number</label>
+                                    <input type="tel" name="phone" required placeholder="062 576 7344" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Suburb / Area</label>
+                                    <input type="text" name="suburb" required placeholder="e.g. Beacon Bay, Nahoon" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Required Services</label>
+                                <select name="service_type" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition text-sm text-slate-700">
+                                    <option value="Regular Maintenance">Regular Lawn & Garden Maintenance</option>
+                                    <option value="Once-Off Cleanup">Once-Off Yard Cleanup & Refuse Removal</option>
+                                    <option value="Hedge Trimming">Hedge & Tree Pruning</option>
+                                    <option value="Plot Clearing">Plot Clearing / Overgrown Yard</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Additional Notes</label>
+                                <textarea name="notes" rows="3" placeholder="Describe yard size, specific requests, or gate access info..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-emerald-600/30 transition">
+                                Request Booking Confirmation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">Our Capabilities</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Comprehensive Lawn & Yard Solutions</h3>
+                <p class="text-slate-600 mt-4 text-base">We handle everything from regular mowing maintenance to major overgrown plot cleanups.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-xl hover:border-emerald-200 transition group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Lawn Mowing & Edging</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Precision lawn cutting with neat, sharp edging along driveways, pathways, and flowerbeds.</p>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider inline-flex items-center gap-1">
+                        Weekly / Bi-Weekly <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-xl hover:border-emerald-200 transition group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-plant-wilt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Weed Control & Weeding</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Thorough removal of invasive weeds from paving cracks, flower beds, and open lawn spaces.</p>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider inline-flex items-center gap-1">
+                        Root Removal <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-xl hover:border-emerald-200 transition group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Hedge & Tree Pruning</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Shaping overgrown hedges, trimming low-hanging tree branches, and maintaining garden greenery.</p>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider inline-flex items-center gap-1">
+                        Seasonal Shaping <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-xl hover:border-emerald-200 transition group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Garden Refuse Removal</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Complete cleanup, bagging, and hauling away of grass clippings, fallen leaves, and cut branches.</p>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider inline-flex items-center gap-1">
+                        Clean Premises Guarantee <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-xl hover:border-emerald-200 transition group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Plot & Overgrown Yard Clearing</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Heavy-duty bush cutting, brush clearing, and restoring neglected yards back to manageable shape.</p>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider inline-flex items-center gap-1">
+                        Once-Off Overhauls <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-xl hover:border-emerald-200 transition group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Commercial Property Maintenance</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Scheduled grounds maintenance for offices, complexes, industrial sites, and commercial facilities.</p>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider inline-flex items-center gap-1">
+                        Contract Services <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Quote Calculator Section -->
+    <section id="calculator" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Instant Estimator</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Estimate Your Yard Service Cost</h2>
+                <p class="text-slate-400 mt-2 text-sm">Select your property size and additional services for an instant estimate.</p>
+            </div>
+
+            <div class="bg-slate-800 rounded-3xl p-6 sm:p-10 border border-slate-700 shadow-2xl space-y-8">
+                
+                <!-- Property Size Selector -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-4">1. Select Property / Yard Size</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <button type="button" onclick="setYardSize('small', 150)" id="btn-small" class="yard-btn bg-slate-700 hover:bg-slate-600 border-2 border-slate-600 p-4 rounded-2xl text-center transition">
+                            <i class="fa-solid fa-house text-xl text-emerald-400 mb-2"></i>
+                            <p class="font-bold text-sm text-white">Small Yard</p>
+                            <p class="text-xs text-slate-400">Up to 250 m²</p>
+                        </button>
+                        <button type="button" onclick="setYardSize('medium', 250)" id="btn-medium" class="yard-btn bg-slate-700 hover:bg-slate-600 border-2 border-slate-600 p-4 rounded-2xl text-center transition">
+                            <i class="fa-solid fa-house-chimney text-xl text-emerald-400 mb-2"></i>
+                            <p class="font-bold text-sm text-white">Medium Yard</p>
+                            <p class="text-xs text-slate-400">250 m² - 600 m²</p>
+                        </button>
+                        <button type="button" onclick="setYardSize('large', 400)" id="btn-large" class="yard-btn bg-slate-700 hover:bg-slate-600 border-2 border-slate-600 p-4 rounded-2xl text-center transition">
+                            <i class="fa-solid fa-warehouse text-xl text-emerald-400 mb-2"></i>
+                            <p class="font-bold text-sm text-white">Large Yard / Plot</p>
+                            <p class="text-xs text-slate-400">600 m² +</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Add-on Additions -->
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-4">2. Add Optional Services</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <label class="flex items-center justify-between p-4 bg-slate-700/50 rounded-xl border border-slate-700 cursor-pointer hover:bg-slate-700 transition">
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" id="add-pruning" onchange="calculateTotal()" class="w-5 h-5 rounded text-emerald-500 focus:ring-emerald-500 bg-slate-800 border-slate-600">
+                                <span class="text-sm font-medium text-slate-200">Hedge & Tree Pruning</span>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-400">+ R100</span>
+                        </label>
+                        <label class="flex items-center justify-between p-4 bg-slate-700/50 rounded-xl border border-slate-700 cursor-pointer hover:bg-slate-700 transition">
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" id="add-refuse" onchange="calculateTotal()" class="w-5 h-5 rounded text-emerald-500 focus:ring-emerald-500 bg-slate-800 border-slate-600">
+                                <span class="text-sm font-medium text-slate-200">Garden Waste Haulage</span>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-400">+ R80</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Estimated Total Bar -->
+                <div class="bg-slate-900/80 rounded-2xl p-6 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block">Estimated Total</span>
+                        <div class="text-3xl font-extrabold text-emerald-400" id="total-price">R0</div>
+                    </div>
+                    <a href="#booking" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl transition text-center text-sm">
+                        Proceed to Booking
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <span class="text-lg font-bold text-white block mb-2">Lawn Care & Yard Gardening Services</span>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Professional lawn mowing, hedging, weeding, plot clearing, and garden refuse removal across East London.
+                    </p>
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-300 block mb-3">Direct Contact</span>
+                    <p class="text-xs text-slate-400 mb-1"><i class="fa-solid fa-phone text-emerald-500 mr-2"></i> 062 576 7344</p>
+                    <p class="text-xs text-slate-400"><i class="fa-solid fa-envelope text-emerald-500 mr-2"></i> springfieldleroy@gmail.com</p>
+                </div>
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-300 block mb-3">Service Hours</span>
+                    <p class="text-xs text-slate-400">Monday – Saturday: 07:30 – 17:00</p>
+                    <p class="text-xs text-slate-500 mt-1">Available for emergency storm cleanup.</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-600">
+                &copy; 2026 Lawn Care & Yard Gardening Services. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Calculator Script -->
+    <script>
+        let basePrice = 0;
+
+        function setYardSize(size, price) {
+            basePrice = price;
+            
+            // Reset button highlights
+            document.querySelectorAll('.yard-btn').forEach(btn => {
+                btn.classList.remove('border-emerald-500', 'bg-slate-700/90');
+                btn.classList.add('border-slate-600', 'bg-slate-700');
+            });
+
+            // Highlight selected
+            const activeBtn = document.getElementById(`btn-${size}`);
+            activeBtn.classList.remove('border-slate-600', 'bg-slate-700');
+            activeBtn.classList.add('border-emerald-500', 'bg-slate-700/90');
+
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            if (basePrice === 0) {
+                document.getElementById('total-price').innerText = 'Select a Yard Size';
+                return;
+            }
+
+            let total = basePrice;
+            if (document.getElementById('add-pruning').checked) total += 100;
+            if (document.getElementById('add-refuse').checked) total += 80;
+
+            document.getElementById('total-price').innerText = `R ${total}.00`;
+        }
+    </script>
+</body>
+</html>
