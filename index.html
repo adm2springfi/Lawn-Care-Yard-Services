@@ -141,14 +141,20 @@
                                 </div>
                             </div>
 
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Required Services</label>
-                                <select id="wa-service" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition text-sm text-slate-700">
-                                    <option value="Regular Maintenance">Regular Lawn & Garden Maintenance</option>
-                                    <option value="Once-Off Cleanup">Once-Off Yard Cleanup & Refuse Removal</option>
-                                    <option value="Hedge Trimming">Hedge & Tree Pruning</option>
-                                    <option value="Plot Clearing">Plot Clearing / Overgrown Yard</option>
-                                </select>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Required Service</label>
+                                    <select id="wa-service" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition text-sm text-slate-700">
+                                        <option value="Regular Maintenance">Regular Lawn Maintenance</option>
+                                        <option value="Once-Off Cleanup">Once-Off Yard Cleanup</option>
+                                        <option value="Hedge Trimming">Hedge & Tree Pruning</option>
+                                        <option value="Plot Clearing">Plot Clearing</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Preferred Date</label>
+                                    <input type="date" id="wa-date" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition text-sm text-slate-700">
+                                </div>
                             </div>
 
                             <div>
@@ -389,9 +395,10 @@
             const phone = document.getElementById('wa-phone').value;
             const suburb = document.getElementById('wa-suburb').value;
             const service = document.getElementById('wa-service').value;
+            const date = document.getElementById('wa-date').value;
             const notes = document.getElementById('wa-notes').value || 'None';
 
-            const message = `*New Yard Service Booking!*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Suburb:* ${suburb}%0A*Service:* ${service}%0A*Notes:* ${notes}`;
+            const message = `*New Yard Service Booking!*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Suburb:* ${suburb}%0A*Service:* ${service}%0A*Preferred Date:* ${date}%0A*Notes:* ${notes}`;
             const phoneNumber = '27625767344';
 
             window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
