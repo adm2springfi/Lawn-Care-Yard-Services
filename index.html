@@ -158,6 +158,11 @@
                             </div>
 
                             <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Estimated Quote (From Calculator)</label>
+                                <input type="text" id="wa-estimate" readonly placeholder="Calculated from estimator..." class="w-full px-4 py-3 bg-slate-100 border border-slate-200 rounded-xl text-emerald-700 font-bold outline-none text-sm cursor-not-allowed">
+                            </div>
+
+                            <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Additional Notes</label>
                                 <textarea id="wa-notes" rows="3" placeholder="Describe yard size, specific requests, or gate access info..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition text-sm"></textarea>
                             </div>
@@ -320,9 +325,9 @@
                         <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold block">Estimated Total</span>
                         <div class="text-3xl font-extrabold text-emerald-400" id="total-price">R0</div>
                     </div>
-                    <a href="#booking" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl transition text-center text-sm">
+                    <button type="button" onclick="proceedToBookingWithPrice()" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-xl transition text-center text-sm">
                         Proceed to Booking
-                    </a>
+                    </button>
                 </div>
 
             </div>
@@ -359,6 +364,7 @@
     <!-- Interactive Scripts -->
     <script>
         let basePrice = 0;
+        let currentCalculatedTotal = 0;
 
         function setYardSize(size, price) {
             basePrice = price;
@@ -378,6 +384,7 @@
         function calculateTotal() {
             if (basePrice === 0) {
                 document.getElementById('total-price').innerText = 'Select a Yard Size';
+                currentCalculatedTotal = 0;
                 return;
             }
 
@@ -385,7 +392,20 @@
             if (document.getElementById('add-pruning').checked) total += 100;
             if (document.getElementById('add-refuse').checked) total += 80;
 
+            currentCalculatedTotal = total;
             document.getElementById('total-price').innerText = `R ${total}.00`;
+        }
+
+        function proceedToBookingWithPrice() {
+            const estimateField = document.getElementById('wa-estimate');
+            if (currentCalculatedTotal > 0) {
+                estimateField.value = `R ${currentCalculatedTotal}.00 (Estimated)`;
+            } else {
+                estimateField.value = 'Custom Quote Needed';
+            }
+            
+            // Smooth scroll up to booking form
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
         }
 
         function sendWhatsAppBooking(event) {
@@ -396,9 +416,10 @@
             const suburb = document.getElementById('wa-suburb').value;
             const service = document.getElementById('wa-service').value;
             const date = document.getElementById('wa-date').value;
+            const estimate = document.getElementById('wa-estimate').value || 'Not Calculated';
             const notes = document.getElementById('wa-notes').value || 'None';
 
-            const message = `*New Yard Service Booking!*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Suburb:* ${suburb}%0A*Service:* ${service}%0A*Preferred Date:* ${date}%0A*Notes:* ${notes}`;
+            const message = `*New Yard Service Booking!*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Suburb:* ${suburb}%0A*Service:* ${service}%0A*Preferred Date:* ${date}%0A*Estimated Price:* ${estimate}%0A*Notes:* ${notes}`;
             const phoneNumber = '27625767344';
 
             window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
